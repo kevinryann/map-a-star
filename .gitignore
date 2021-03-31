@@ -1,3 +1,4 @@
 .git
 .pyc
-___pycache__
+src/__pycache
+src/.pyc
