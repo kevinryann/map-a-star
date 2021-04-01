@@ -14,3 +14,6 @@ class point :
     
     def printPoint(self) :
         print("(%d,%d)" % (self.x, self.y))
+
+    def isSame(self, point2):
+        return self.x == point2.x and self.y == point2.y
