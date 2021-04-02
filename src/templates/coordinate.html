@@ -4,6 +4,7 @@
 <head>
     <title>CLICK HANDLER</title>
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <form action = "/" method = "post">
     <script>
         var map,vectorLayer,selectMarkerControl,selectedFeature;
         var lat = 21.7679;
@@ -75,11 +76,24 @@
     trigger: function(e) {
         var lonlat = map.getLonLatFromPixel(e.xy);
         lonlat1= new OpenLayers.LonLat(lonlat.lon,lonlat.lat).transform(toProjection,fromProjection);
-        
+        tes1 = lonlat.lon;
+        tes2 = lonlat.lat;
+        fetch("http://127.0.0.1:5000/", {
+            method:"POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "longitude" : lonlat1.lon,
+                "latitude" : lonlat1.lat
+            })
+        })
         alert(lonlat1.lat + ", " +lonlat1.lon);
     }
 });
 </script>
+</form>
 </head>
 
 <body onload='init();'>
