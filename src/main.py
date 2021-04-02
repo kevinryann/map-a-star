@@ -1,7 +1,6 @@
 import point
 import visualize
 import algorithm
-from pyproj import Proj, transform
 
 listPoints = []
 
