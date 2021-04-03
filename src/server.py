@@ -10,9 +10,11 @@ def writeText() :
         jsonData = json.loads(data)
         longitude = jsonData["longitude"]
         latitude = jsonData["latitude"]
-        with open("coordinate.txt",'w') as file :
-            file.writelines("%f, %f" % (longitude, latitude))
+        with open("coordinate.txt",'a') as file :
+            file.writelines("%f, %f\n" % (longitude, latitude))
     return render_template("coordinate.html")
 
 if __name__ == '__main__':
+    with open("coordinate.txt", "w") as file:
+        file.writelines("")
     app.run(debug=True)

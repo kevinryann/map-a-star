@@ -76,8 +76,7 @@
     trigger: function(e) {
         var lonlat = map.getLonLatFromPixel(e.xy);
         lonlat1= new OpenLayers.LonLat(lonlat.lon,lonlat.lat).transform(toProjection,fromProjection);
-        tes1 = lonlat.lon;
-        tes2 = lonlat.lat;
+
         fetch("http://127.0.0.1:5000/", {
             method:"POST",
             headers: {
