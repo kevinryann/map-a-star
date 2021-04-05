@@ -1,4 +1,4 @@
 .git
 *.pyc
 __pycache__
-coordinate.txt
+src/coordinate.txt
