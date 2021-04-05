@@ -1,4 +1,3 @@
-import numpy as np
 import point
 
 def aStar(start, end):
