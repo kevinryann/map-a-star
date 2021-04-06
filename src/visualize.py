@@ -4,9 +4,11 @@ import point
 
 def visualize(listPoints) : # This function visualizes the graph in cartesian plane
     with open("../test/input1.txt", "r") as f :
+        # Initializing empty list x and y for edge
         edge_x = []
         edge_y = []
 
+        # Appending edges with according to format
         for elmt in listPoints :
             for elmt2 in elmt.route :
                 edge_x.append(elmt.x)
@@ -16,27 +18,32 @@ def visualize(listPoints) : # This function visualizes the graph in cartesian pl
                 edge_y.append(elmt2.y)
                 edge_y.append(None)
 
+    # Plotting with scatter
     edge_trace = go.Scatter(
         x=edge_x, y=edge_y,
         line=dict(width=1, color='black'),
         hoverinfo='none',
         mode='lines')
 
+    # Initializing empty list x and y for node
     node_x = []
     node_y = []
 
+    # Appending x and y to list node
     for elmt in listPoints :
         node_x.append(float(elmt.x))
         node_y.append(float(elmt.y))
 
+    # Make traces
     node_trace = go.Scatter(
         x = node_x, y=node_y,
         mode = 'markers',
         marker = dict(
             line_width=5))
         
+    # Make figure
     fig = go.Figure(data=[edge_trace, node_trace],
-             layout = go.Layout(
+             layout = go.Layout( # Set layout
                 title = 'Visualisasi Points',
                 titlefont_size = 16,
                 showlegend = False,
@@ -82,10 +89,10 @@ def visualizee(listPoints, path, start, end) : # This functions visualizes the r
     fig.update_layout(
         margin = {'l':0, 't':0, 'b':0, 'r':0},
         mapbox = {
-            'center' : {'lon':50, 'lat':0},
+            'center' : {'lat':0, 'lon':50},
             'style' : "stamen-terrain",
             'zoom' : 1,
-            'center' : {'lon':50, 'lat':0}
+            'center' : {'lat':0, 'lon':50}
         }
     )
 

@@ -47,11 +47,10 @@ def read_file(file_name): # Read {file_name}.txt if located in test folder
     return listPoints # Returns listPoints
 
 # Main program
-print("Pilihlah input yang akan digunakan:")
 print("1. Dari titik yang sudah dipilih di web")
 print("2. Dari file")
 
-choice = input()
+choice = input("Pilihlah input yang akan digunakan : ")
 if choice == "1":
     file_name = "input.txt"
 else:
@@ -76,5 +75,16 @@ with open("../test/" + file_name, 'r') as file :
 start_index = int(input("Masukkan titik asal : ")) # Input start coordinate
 end_index = int(input("Masukkan titik tujuan : ")) # Input end coordinate
 
-path = algorithm.aStar(listPoints[start_index-1], listPoints[end_index-1]) # Call the A* Algorithm
-visualize.visualizee(listPoints, path, listPoints[start_index-1], listPoints[end_index-1]) # Visualizing result into a map
+choice = "0"
+while (choice != "2") :
+    print("\n1. Visualisasi graf dalam bidang kartesian")
+    print("2. Jalankan A* dan visualisasi")
+    choice = input("Pilihan : ")
+    if choice == "1" :
+        visualize.visualize(listPoints) # Visualize graph
+    elif choice == "2" :
+        path = algorithm.aStar(listPoints[start_index-1], listPoints[end_index-1]) # Call the A* Algorithm
+        visualize.visualizee(listPoints, path, listPoints[start_index-1], listPoints[end_index-1]) # Visualizing result into a map
+        break
+    else :
+        print("Input salah")
