@@ -19,7 +19,7 @@
 2. Make sure you have installed the requirements. If you haven't, run your terminal, go to the directory of this program and type in `pip install -r src/requirements.txt'
 
 ## How to Use
-# Run Using Windows Batch File
+### Run Using Windows Batch File
 1. If you are using virtual environment, activate it beforehand through terminal
 2. Go to bin directory
 `cd bin`
@@ -32,7 +32,7 @@
 8. Choose to visualize the connected graph or the path from start point to end point
 9. The program will automatically open your browser to visualize
 
-# Run Manually
+### Run Manually
 *If you have prepares the test case(s), do number 1 and jump to number 7*
 1. Go to src directory
 `cd src`
@@ -55,7 +55,7 @@ or
 9. Choose to visualize the connected graph or the path from start point to end point
 10. The program will automatically open your browser to visualize
 
-# Input Format in File
+### Input Format in File
 ```(N numbers of nodes)
 (x1, y1)
 (x2, y2)
