@@ -31,7 +31,7 @@
 7. The program will automatically open your browser to visualize the route from the starting point to the end point.
 
 # Run Manually
-*Skip this part if you have prepared the test case(s)*
+*If you have prepares the test case(s) jump to number 7*
 1. Go to directory src
 `cd src`
 2. Run server.py and make sure localhost address matches the one on your browser. If it doesn't, type in the address manually
@@ -45,7 +45,6 @@ or
 or
 `python3 makeRoute.py`
 6. Now is the time to build the adjacency matrix. This matrix represents the existence of route between two points. If you wanted to "build" a route between the first coordinate and third coordinate, type in "1 3". To stop building, type in "-99"
-*Continue this part*
 7. Run main.py
 `python main.py`
 or
