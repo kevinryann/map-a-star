@@ -28,8 +28,6 @@
             map.addLayer(mapnik);
             map.setCenter(cntrposition, zoom);
 
-            markers.addMarker(new OpenLayers.Marker(cntrposition));
-
             var click = new OpenLayers.Control.Click();
             map.addControl(click);
 
