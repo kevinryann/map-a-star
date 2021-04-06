@@ -6,7 +6,7 @@ class point : # Initializing class point
         self.y = y
         self.route = []
 
-    def euclideanDistance(self, point2) :
+    def haversineDistance(self, point2) :
         R = 6373.0 # Radius of the earth (in km)
 
         # Converting coordinates to radians

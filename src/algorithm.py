@@ -21,7 +21,7 @@ def aStar(start, end):
             break # end the loop
 
         for adjacentPoints in adjacent: # get ajdacent point in adjacent
-            tmpCost = adjacentPoints.euclideanDistance(end) + adjacentPoints.euclideanDistance(curr) # temp cost = distance between adjacent point and end point + distance between ajacent point and current point
+            tmpCost = adjacentPoints.haversineDistance(end) + adjacentPoints.haversineDistance(curr) # temp cost = distance between adjacent point and end point + distance between ajacent point and current point
             findCost[adjacent.index(adjacentPoints)] = tmpCost # to set the distances of temp cost based on the index of the adjacent point that was used to calculate temp cost
 
         minIdx = findCost.index(min(findCost)) # to find the minimum distance in findCost
