@@ -2,4 +2,4 @@ flask
 networkx
 matplotlib
 plotly
-numpy
+geopy
