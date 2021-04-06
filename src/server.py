@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template
 import json
+import webbrowser
+from threading import Timer
 
 # template
 app = Flask(__name__)
@@ -26,5 +28,10 @@ def writeText() :
     # show the map
     return render_template("coordinate.html")
 
+# to automatically open browser
+def open_browser():
+    webbrowser.open_new("http://127.0.0.1:5000")
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    Timer(1, open_browser).start()
+    app.run(port=5000)

@@ -47,7 +47,15 @@ def read_file(file_name): # Read {file_name}.txt if located in test folder
     return listPoints # Returns listPoints
 
 # Main program
-file_name = input("Input file name: ") # Input filename
+print("Pilihlah input yang akan digunakan:")
+print("1. Dari titik yang sudah dipilih di web")
+print("2. Dari file")
+
+choice = input()
+if choice == "1":
+    file_name = "input.txt"
+else:
+    file_name = input("Input file name: ")
 
 # Handling the case where user did not input .txt extension
 if ".txt" not in file_name:
