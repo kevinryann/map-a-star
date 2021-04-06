@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import point
 
@@ -40,9 +41,9 @@ def visualize(listPoints) : # This function visualizes the graph in cartesian pl
         marker = dict(
             line_width=5))
         
-    # Make figure
+    # Make fi
     fig = go.Figure(data=[edge_trace, node_trace],
-             layout = go.Layout( # Set layout
+             layout = go.Layout(
                 title = 'Visualisasi Points',
                 titlefont_size = 16,
                 showlegend = False,
@@ -88,10 +89,10 @@ def visualizee(listPoints, path, start, end) : # This functions visualizes the r
     fig.update_layout(
         margin = {'l':0, 't':0, 'b':0, 'r':0},
         mapbox = {
-            'center' : {'lat':0, 'lon':50},
+            'center' : {'lon':50, 'lat':0},
             'style' : "stamen-terrain",
             'zoom' : 1,
-            'center' : {'lat':0, 'lon':50}
+            'center' : {'lon':50, 'lat':0}
         }
     )
 
